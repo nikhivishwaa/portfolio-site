@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Navbar() {
   return (
     <>
-      <nav className="sticky top-0 w-full flex justify-evenly bg-secondary text-primary py-2 pt-3 text-lg items-center">
+      <nav className="sticky top-0 w-full z-10 flex justify-evenly bg-secondary text-primary py-2 pt-3 text-lg items-center">
         <div className="flex text-primary rounded-md items-center justify-center gap-1">
           <Image height={35} width={35} src="/logo.svg" alt="logo" />
           <span className="font-semibold font-poppins text-xl">

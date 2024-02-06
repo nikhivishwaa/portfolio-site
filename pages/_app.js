@@ -4,6 +4,7 @@ import Head from "next/head";
 
 // importing fonts
 import { Exo, Inter, Poppins } from "next/font/google";
+import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function App({ Component, pageProps }) {
       <main className={(inter.variable, poppins.variable, exo.variable)}>
         <Navbar />
         <Component {...pageProps} />
+        <Footer/>
       </main>
     </>
   );
