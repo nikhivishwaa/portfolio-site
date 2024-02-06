@@ -1,7 +1,9 @@
+import AboutScreen from "@/components/Screens/AboutScreen";
+
 export default function About() {
     return (
-        <div>
-            About page
-        </div>
+        <>
+        <AboutScreen/>
+        </>
     );
 }

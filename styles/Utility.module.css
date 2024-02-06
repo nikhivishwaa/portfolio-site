@@ -1,0 +1,24 @@
+.primary-btn {
+  background-image: linear-gradient(113deg, #ecf1f6, #ffffff);
+  box-shadow: 4px 3px 9px 1px #8d8888;
+  border-radius: 4px;
+}
+
+.primary-btn:active {
+  box-shadow: 4px 3px 9px 1px #8c28ff;
+}
+
+.secondary-btn {
+  background-image: linear-gradient(37deg, #7700ac, #ff006a);
+  box-shadow: 4px 3px 9px 1px #8d8888;
+  border-radius: 4px;
+  color: white;
+}
+
+.secondary-btn:active {
+  box-shadow: 4px 3px 9px 1px #8c28ff;
+}
+
+.spacing {
+  letter-spacing: 0.8px;
+}

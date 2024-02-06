@@ -16,13 +16,17 @@ module.exports = {
         inter: ["var(--font-inter)"],
         poppins: ["var(--font-poppins)"],
         exo: ["var(--font-exo)"],
+        dosis: ["var(--font-dosis)"],
+        montAlter: ["var(--font-montAlter)"],
       },
       backgroundColor: {
         primary: "#0a0a68",
         secondary: "#f7faff",
+        screen: "#e9f2ff",
       },
       colors: {
         primary: "#0a0a68",
+        secondary: "#ff0075",
       },
     },
   },
