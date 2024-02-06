@@ -16,8 +16,8 @@ module.exports = {
         inter: ["var(--font-inter)"],
         poppins: ["var(--font-poppins)"],
         exo: ["var(--font-exo)"],
-        dosis: ["var(--font-dosis)"],
-        montAlter: ["var(--font-montAlter)"],
+        lexend: ["var(--font-lexend)"],
+        mulish: ["var(--font-mulish)"],
       },
       backgroundColor: {
         primary: "#0a0a68",

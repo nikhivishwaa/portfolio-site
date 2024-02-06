@@ -5,7 +5,8 @@
 }
 
 .primary-btn:active {
-  box-shadow: 4px 3px 9px 1px #8c28ff;
+  /* box-shadow: 4px 3px 9px 1px #8c28ff; */
+  box-shadow: 4px 3px 9px 1px #c0c0c0;
 }
 
 .secondary-btn {
@@ -16,7 +17,7 @@
 }
 
 .secondary-btn:active {
-  box-shadow: 4px 3px 9px 1px #8c28ff;
+  box-shadow: 4px 3px 9px 1px #c0c0c0;
 }
 
 .spacing {

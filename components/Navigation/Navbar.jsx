@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import styles from '@/styles/Utility.module.css'
 
 export default function Navbar() {
   const { asPath } = useRouter();
@@ -21,7 +22,7 @@ export default function Navbar() {
             Nikhivishwa
           </span>
         </div>
-        <div className="flex gap-7 font-exo text-base font-bold items-end">
+        <div className={`flex gap-7 font-mulish text-base font-bold items-end ${styles.spacing}`}>
           {Object.keys(pathList).map((key, i) => (
             <Link href={key} key={i}>
               <span
@@ -35,7 +36,7 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex bg-[#0a0a68] text-white py-2 px-3 rounded-md items-center justify-center gap-1">
-          <span className="font-medium font-exo text-base">
+          <span className="font-medium font-mulish text-base">
             Let&apos;s Chat
           </span>
           <svg

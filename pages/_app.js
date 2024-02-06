@@ -3,13 +3,7 @@ import "@/styles/globals.css";
 import Head from "next/head";
 
 // importing fonts
-import {
-  Dosis,
-  Exo,
-  Inter,
-  Montserrat_Alternates,
-  Poppins,
-} from "next/font/google";
+import { Lexend, Exo, Inter, Mulish, Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
@@ -19,10 +13,10 @@ const poppins = Poppins({
 });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const exo = Exo({ subsets: ["latin"], variable: "--font-exo" });
-const dosis = Dosis({ subsets: ["latin"], variable: "--font-dosis" });
-const montAlter = Montserrat_Alternates({
+const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
+const mulish = Mulish({
   subsets: ["latin"],
-  variable: "--font-montAlter",
+  variable: "--font-mulish",
   weight: ["400", "500"],
 });
 
@@ -56,8 +50,8 @@ export default function App({ Component, pageProps }) {
           (inter.variable,
           poppins.variable,
           exo.variable,
-          dosis.variable,
-          montAlter.variable)
+          lexend.variable,
+          mulish.variable)
         }
       >
         <Navbar />
