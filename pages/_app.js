@@ -1,5 +1,17 @@
+import Navbar from "@/components/Navigation/Navbar";
 import "@/styles/globals.css";
 import Head from "next/head";
+
+// importing fonts
+import { Exo, Inter, Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["300", "400"],
+});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const exo = Exo({ subsets: ["latin"], variable: "--font-exo" });
 
 export default function App({ Component, pageProps }) {
   return (
@@ -26,7 +38,10 @@ export default function App({ Component, pageProps }) {
 6.png"
         />
       </Head>
-      <Component {...pageProps} />
+      <main className={(inter.variable, poppins.variable, exo.variable)}>
+        <Navbar />
+        <Component {...pageProps} />
+      </main>
     </>
   );
 }
