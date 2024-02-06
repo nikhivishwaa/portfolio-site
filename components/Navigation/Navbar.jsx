@@ -1,7 +1,17 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
+  const { asPath } = useRouter();
+  console.log(asPath);
+  const pathList = {
+    "/": "Home",
+    "/about": "About",
+    "/services": "Services",
+    "/contact": "Contact",
+    "/pricing": "Pricing",
+  };
   return (
     <>
       <nav className="sticky top-0 w-full z-10 flex justify-evenly bg-secondary text-primary py-2 pt-3 text-lg items-center">
@@ -12,14 +22,22 @@ export default function Navbar() {
           </span>
         </div>
         <div className="flex gap-7 font-exo text-base font-bold items-end">
-          <Link href="/">Home</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Services</Link>
-          <Link href="/">Contact</Link>
-          <Link href="/">Pricing</Link>
+          {Object.keys(pathList).map((key, i) => (
+            <Link href={key} key={i}>
+              <span
+                className={`capitalize underline-offset-8 decoration-2 decoration-[red] ${
+                  asPath === key ? "underline" : ""
+                }`}
+              >
+                &nbsp;{`${pathList[key]}`}&nbsp;
+              </span>
+            </Link>
+          ))}
         </div>
         <div className="flex bg-[#0a0a68] text-white py-2 px-3 rounded-md items-center justify-center gap-1">
-          <span className="font-medium font-exo text-base">Let&apos;s Chat</span>
+          <span className="font-medium font-exo text-base">
+            Let&apos;s Chat
+          </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="white"

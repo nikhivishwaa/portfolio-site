@@ -2,44 +2,39 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
-  const socials = [
-    "Github",
-    "Twitter",
-    "Facebook",
-    "Instagram",
-    "Medium",
-    "Youtube",
-    "Linkedin",
-    "Fiverr",
-  ];
-  const accounts = [
-    "https://github.com/nikhivishwaa/",
-    "https://twitter.com/nikhivishwa/",
-    "https://Facebook.com/nikhilvishwakarma241dl/",
-    "https://www.instagram.com/nikhilvishwakarma241dl/",
-    "https://Medium.com/@nikhivishwa/",
-    "http://www.youtube.com/@Logicalcoding01",
-    "https://Linkedin.com/in/nikhivishwa/",
-    "https://www.fiverr.com/nikhivishwa",
-  ];
+  const socials = {
+    Github: "https://github.com/nikhivishwaa/",
+    Twitter: "https://twitter.com/nikhivishwa/",
+    Facebook: "https://Facebook.com/nikhilvishwakarma241dl/",
+    Instagram: "https://www.instagram.com/nikhilvishwakarma241dl/",
+    Medium: "https://Medium.com/@nikhivishwa/",
+    Youtube: "http://www.youtube.com/@Logicalcoding01",
+    Linkedin: "https://Linkedin.com/in/nikhivishwa/",
+    Fiverr: "https://www.fiverr.com/nikhivishwa",
+  };
+
   return (
     <>
-      <footer className="w-full flex bg-secondary bottom-0 pt-4 pb-3 flex-col">
-        <div className="flex justify-center gap-7 my-4">
-          {socials.map((i, key) => (
-            <Link href={accounts[key]} target="_blank">
+      <footer className="h-60 w-full flex bg-secondary bottom-0 py-4 flex-col gap-6 justify-center">
+        <div className="flex gap-5 justify-center items-center">
+          <hr style={{ border: "2px solid red", width: "135px" }} />
+          <span className="font-semibold text-primary">Contact Us</span>
+          <hr style={{ border: "2px solid red", width: "135px" }} />
+        </div>
+        <div className="flex justify-center gap-7 pt-3">
+          {Object.keys(socials).map((key) => (
+            <Link href={socials[key]} target="_blank" key={key}>
               <Image
-                src={`/logo/${i}.webp`}
-                alt={i}
+                src={`/logo/${key}.webp`}
+                alt={key}
                 height={25}
                 width={25}
-                key={key}
               />
             </Link>
           ))}
         </div>
-        <div className="flex-flex-col">
-          <p className="text-[grey]  text-center">
+        <div className="flex-flex-col justify-self-end mt-5">
+          <p className="text-[grey]  text-center text-sm font-inter">
             &copy;{`  Copyright 2023 - ${new Date().getFullYear()} `}| All
             Rights Reserved by Nikhil Vishwakarma
           </p>
