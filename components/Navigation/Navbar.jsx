@@ -1,13 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
-import chatIcon from "@/components/icons/chat.svg";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
     <>
       <nav className="sticky top-0 w-full flex justify-evenly bg-secondary text-primary py-2 pt-3 text-lg items-center">
         <div className="flex text-primary rounded-md items-center justify-center gap-1">
-          <Image height={35} width={35} src={"/logo.svg"} alt="logo" />
+          <Image height={35} width={35} src="/logo.svg" alt="logo" />
           <span className="font-semibold font-poppins text-xl">
             Nikhivishwa
           </span>
@@ -20,7 +19,7 @@ export default function Navbar() {
           <Link href="/">Pricing</Link>
         </div>
         <div className="flex bg-[#0a0a68] text-white py-2 px-3 rounded-md items-center justify-center gap-1">
-          <span className="font-medium font-exo text-base">Let's Chat</span>
+          <span className="font-medium font-exo text-base">Let&apos;s Chat</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="white"
