@@ -14,10 +14,10 @@ module.exports = {
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
-        poppins: ["var(--font-poppins)"],
         exo: ["var(--font-exo)"],
         lexend: ["var(--font-lexend)"],
         mulish: ["var(--font-mulish)"],
+        mitr: ["var(--font-mitr)"],
       },
       backgroundColor: {
         primary: "#0a0a68",

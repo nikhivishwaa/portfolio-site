@@ -3,13 +3,13 @@ import "@/styles/globals.css";
 import Head from "next/head";
 
 // importing fonts
-import { Lexend, Exo, Inter, Mulish, Poppins } from "next/font/google";
+import { Lexend, Exo, Inter, Mulish, Mitr } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
 
-const poppins = Poppins({
+const mitr = Mitr({
   subsets: ["latin"],
-  variable: "--font-poppins",
-  weight: ["300", "400"],
+  variable: "--font-mitr",
+  weight: ["400", "500"],
 });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const exo = Exo({ subsets: ["latin"], variable: "--font-exo" });
@@ -46,13 +46,13 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       <main
-        className={
-          (inter.variable,
-          poppins.variable,
+        className={[
+          inter.variable,
+          mitr.variable,
           exo.variable,
           lexend.variable,
-          mulish.variable)
-        }
+          mulish.variable,
+        ].join(" ")}
       >
         <Navbar />
         <Component {...pageProps} />

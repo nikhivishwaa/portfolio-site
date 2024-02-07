@@ -8,7 +8,7 @@ export default function TitleDescList(props) {
     <>
       <div className="flex p-2 flex-col gap-1 items-start">
         {dataList.map((data, i) => (
-          <setction className="flex gap-3 items-start" key={i}>
+          <section className="flex gap-3 items-start" key={i}>
             <Image
               src="/icons/List.svg"
               height={18}
@@ -26,7 +26,7 @@ export default function TitleDescList(props) {
                 {data.desc}
               </p>
             </div>
-          </setction>
+          </section>
         ))}
       </div>
     </>

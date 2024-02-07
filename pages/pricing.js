@@ -1,3 +1,9 @@
+import PricingScreen from "@/components/Screens/PricingScreen";
+
 export default function Pricing() {
-  return <div>Pricing</div>;
+  return (
+    <div className="py-1">
+      <PricingScreen />
+    </div>
+  );
 }
