@@ -18,6 +18,7 @@ module.exports = {
         lexend: ["var(--font-lexend)"],
         mulish: ["var(--font-mulish)"],
         mitr: ["var(--font-mitr)"],
+        poppins: ["var(--font-poppins)"],
       },
       backgroundColor: {
         primary: "#0a0a68",

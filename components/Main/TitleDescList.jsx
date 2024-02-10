@@ -22,7 +22,7 @@ export default function TitleDescList(props) {
               <p className="capitalize font-bold text-[15px] text-primary">
                 {data.title}
               </p>
-              <p className="truncate font-medium text-sm text-gray-500">
+              <p className="elipse font-medium text-sm text-gray-500">
                 {data.desc}
               </p>
             </div>

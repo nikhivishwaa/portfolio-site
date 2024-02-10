@@ -3,6 +3,8 @@ import styles from "@/styles/Utility.module.css";
 import Image from "next/image";
 import TitleDescList from "../Main/TitleDescList";
 import useSWR from "swr";
+import SkillsScreen from "./SkillsScreen";
+import HaveProject from "../Main/HaveProject";
 
 const data = {
   "main skills": [
@@ -118,6 +120,12 @@ export default function AboutScreen() {
               </svg>
             </button>
           </div>
+        </section>
+        <section className="py-8">
+          <SkillsScreen />
+        </section>
+        <section className="py-8 flex justify-center">
+          <HaveProject />
         </section>
       </div>
     </>
