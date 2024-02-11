@@ -5,6 +5,8 @@ import TitleDescList from "../Main/TitleDescList";
 import useSWR from "swr";
 import SkillsScreen from "./SkillsScreen";
 import HaveProject from "../Main/HaveProject";
+import PortfolioScreen from "./PortfolioScreen";
+import ContactmeScreen from "./ContactmeScreen";
 
 const data = {
   "main skills": [
@@ -126,6 +128,15 @@ export default function AboutScreen() {
         </section>
         <section className="py-8 flex justify-center">
           <HaveProject />
+        </section>
+        <section className="pt-8 flex justify-center">
+          <PortfolioScreen />
+        </section>
+        <section className="flex justify-center my-3">
+          <hr className="border w-10/12" />
+        </section>
+        <section className="flex justify-center">
+          <ContactmeScreen />
         </section>
       </div>
     </>
