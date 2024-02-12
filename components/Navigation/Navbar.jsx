@@ -8,9 +8,10 @@ export default function Navbar() {
   const pathList = {
     "/": "Home",
     "/about": "About",
-    "/services": "Services",
+    "/portfolio": "Portfolio",
     "/contact": "Contact",
     "/pricing": "Pricing",
+    "/blog": "Blog",
   };
   return (
     <>

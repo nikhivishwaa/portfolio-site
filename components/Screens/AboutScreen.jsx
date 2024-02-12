@@ -8,6 +8,7 @@ import HaveProject from "../Main/HaveProject";
 import PortfolioScreen from "./PortfolioScreen";
 import ContactmeScreen from "./ContactmeScreen";
 import BlogScreen from "./BlogScreen";
+import HomeScreen from "./HomeScreen";
 
 const data = {
   "main skills": [
@@ -64,7 +65,7 @@ export default function AboutScreen() {
   };
   return (
     <>
-      <div className="flex flex-col mt-1 justify-center items-stretch bg-screen">
+      <div className="flex flex-col justify-center items-stretch bg-screen">
         <section className="flex flex-row justify-evenly items-center">
           <div className="flex flex-col justify-center items-center w-1/2">
             <div className="flex gap-8 text-sm font-bold font-mulish tracking-widest">
