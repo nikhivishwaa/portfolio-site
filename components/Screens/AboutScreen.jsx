@@ -7,6 +7,7 @@ import SkillsScreen from "./SkillsScreen";
 import HaveProject from "../Main/HaveProject";
 import PortfolioScreen from "./PortfolioScreen";
 import ContactmeScreen from "./ContactmeScreen";
+import BlogScreen from "./BlogScreen";
 
 const data = {
   "main skills": [
@@ -137,6 +138,12 @@ export default function AboutScreen() {
         </section>
         <section className="flex justify-center">
           <ContactmeScreen />
+        </section>
+        <section className="flex justify-center my-10">
+          <hr className="border w-10/12" />
+        </section>
+        <section className="flex justify-center">
+          <BlogScreen />
         </section>
       </div>
     </>

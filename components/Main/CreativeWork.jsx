@@ -60,6 +60,7 @@ export default function CreativeWork(props) {
             height={230}
             width={180}
             className="rounded-lg border object-cover"
+            alt="work snap"
           />
         </div>
       </div>

@@ -5,7 +5,6 @@ import styles from '@/styles/Utility.module.css'
 
 export default function Navbar() {
   const { asPath } = useRouter();
-  console.log(asPath);
   const pathList = {
     "/": "Home",
     "/about": "About",

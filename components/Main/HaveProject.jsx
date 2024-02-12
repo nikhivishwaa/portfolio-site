@@ -52,6 +52,7 @@ export default function HaveProject() {
             width={200}
             height={277}
             className="absolute bottom-0 right-20 drop-shadow"
+            alt="contact us"
           />
         </div>
       </div>

@@ -26,7 +26,7 @@ export default function HomeScreen() {
               onClick={(e) => handleClick(e)}
             >
               <span>Download CV</span>
-              <Image src="/icons/downloadFile.svg" width={20} height={20} />
+              <Image src="/icons/downloadFile.svg" width={20} height={20} alt="download"/>
             </button>
           </div>
         </div>

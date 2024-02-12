@@ -13,6 +13,7 @@ export default function ContactTicket() {
           height={235}
           width={352}
           className="mx-4 rounded-[6px]"
+          alt="contact us"
         />
 
         <span

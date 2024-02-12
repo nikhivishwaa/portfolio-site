@@ -75,7 +75,7 @@ export default function ContactForm() {
           value={formData.message}
           name="message"
           cols="30"
-          rows="5"
+          rows="4"
           placeholder="Message"
           className="p-4 py-2 border rounded-sm font-medium"
           required
