@@ -11,8 +11,8 @@ export default function FloatIcon(props) {
       >
         <Image
           src={props.src}
-          height={100}
-          width={100}
+          height={38}
+          width={38}
           style={{ height:"38px", width:"38px", ...props.logo }}
           className={props.logoClass}
           objectFit="fill"
