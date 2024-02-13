@@ -15,7 +15,7 @@ export default function HomeScreen() {
         style={{ backgroundImage: "linear-gradient(113deg, #ecf1f6, #ffffff)" }}
       >
         <div
-          className={`w-4/12 flex font-poppins flex-col gap-1 font-bold justify-center items-start ${styles.spacing}`}
+          className={`lg:w-1/2 xl:w-4/12 flex font-poppins flex-col gap-1 font-bold justify-center items-start ${styles.spacing}`}
         >
           <p className="text-[42px]">
             Hi I&apos;m&nbsp;
@@ -48,11 +48,11 @@ export default function HomeScreen() {
               />
             </button>
           </div>
-          <div className="flex justify-end w-full">
+          <div className="lg:flex justify-end w-full md:hidden">
             <FloatIcon src="/logo/NextJS.png" logoClass="rounded-full" />
           </div>
         </div>
-        <div className="relative w-5/12 mt-12 flex justify-evenly items-center">
+        <div className="lg:w-1/2 relative xl:w-5/12 mt-12 flex justify-evenly items-center">
           <div
             className="relative rounded-full h-[400px] w-[400px]"
             style={{
