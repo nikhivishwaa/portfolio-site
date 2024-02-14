@@ -8,11 +8,10 @@ export default function HomeScreen() {
     console.log("button clicked");
   };
 
-  // console.log(window.maxwidth)
   return (
     <>
       <div
-        className="flex justify-center items-center p-5 py-20"
+        className="flex justify-center items-center p-5 py-20 md:flex-nowrap flex-wrap-reverse"
         style={{ backgroundImage: "linear-gradient(113deg, #ecf1f6, #ffffff)" }}
       >
         <div
@@ -49,13 +48,13 @@ export default function HomeScreen() {
               />
             </button>
           </div>
-          <div className="lg:flex justify-end w-full md:hidden">
+          <div className="lg:flex justify-end w-full hidden">
             <FloatIcon src="/logo/NextJS.png" logoClass="rounded-full" />
           </div>
         </div>
         <div className="lg:w-1/2 relative xl:w-5/12 mt-12 flex justify-evenly items-center">
           <div
-            className="relative rounded-full h-[400px] w-[400px]"
+            className="relative rounded-full lg:w-[400px] md:w-[300px] w-[230px] aspect-[1/1]"
             style={{
               backgroundImage: "linear-gradient(51deg, #dfe8fc, white)",
               border: "12px solid white",
@@ -67,10 +66,7 @@ export default function HomeScreen() {
               width={400}
               height={500}
               alt="profile"
-              className="rounded-full absolute top-4"
-              style={{
-                top: "-96px",
-              }}
+              className="rounded-full absolute bottom-0 w-[100%] aspect-[4/5]"
             />
           </div>
           <div className="stack lg:flex flex-col justify-center items-center gap-5 hidden">
