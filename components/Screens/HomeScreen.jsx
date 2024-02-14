@@ -8,6 +8,7 @@ export default function HomeScreen() {
     console.log("button clicked");
   };
 
+  // console.log(window.maxwidth)
   return (
     <>
       <div
@@ -72,7 +73,7 @@ export default function HomeScreen() {
               }}
             />
           </div>
-          <div className="stack flex flex-col justify-center items-center gap-5">
+          <div className="stack lg:flex flex-col justify-center items-center gap-5 hidden">
             <FloatIcon src="/logo/MongoDB.png" />
             <FloatIcon src="/logo/ExpressJS.png" />
             <FloatIcon src="/logo/ReactJS.png" />
@@ -80,7 +81,7 @@ export default function HomeScreen() {
           </div>
           <FloatIcon
             src="/logo/Django.png"
-            className="absolute"
+            className="absolute hidden lg:inline"
             style={{ bottom: "0px", left: "0px" }}
           />
         </div>
