@@ -11,11 +11,11 @@ export default function HomeScreen() {
   return (
     <>
       <div
-        className="flex justify-center items-center p-5 py-20 md:flex-nowrap flex-wrap-reverse"
+        className="flex justify-center items-center p-5 py-14 md:py-20 md:flex-nowrap flex-wrap-reverse gap-5"
         style={{ backgroundImage: "linear-gradient(113deg, #ecf1f6, #ffffff)" }}
       >
         <div
-          className={`lg:w-1/2 xl:w-4/12 flex font-poppins flex-col gap-1 font-bold justify-center items-start ${styles.spacing}`}
+          className={`md:w-1/2 xl:w-4/12 flex font-poppins flex-col gap-1 font-bold justify-center md:items-start items-center ${styles.spacing}`}
         >
           <p className="text-[42px]">
             Hi I&apos;m&nbsp;
@@ -52,9 +52,9 @@ export default function HomeScreen() {
             <FloatIcon src="/logo/NextJS.png" logoClass="rounded-full" />
           </div>
         </div>
-        <div className="lg:w-1/2 relative xl:w-5/12 mt-12 flex justify-evenly items-center">
+        <div className="lg:w-1/2 relative xl:w-5/12 md:mt-12 flex justify-evenly items-center">
           <div
-            className="relative rounded-full lg:w-[400px] md:w-[300px] w-[230px] aspect-[1/1]"
+            className="relative rounded-full lg:w-[370px] md:w-[300px] w-[230px] aspect-[1/1]"
             style={{
               backgroundImage: "linear-gradient(51deg, #dfe8fc, white)",
               border: "12px solid white",

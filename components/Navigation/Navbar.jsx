@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from '@/styles/Utility.module.css'
+import styles from "@/styles/Utility.module.css";
 
 export default function Navbar() {
   const { asPath } = useRouter();
@@ -15,14 +15,32 @@ export default function Navbar() {
   };
   return (
     <>
-      <nav className="sticky top-0 w-full z-10 flex justify-evenly bg-secondary text-primary py-2 pt-3 text-lg items-center">
+      <nav className="px-2 md:px-0 sticky top-0 w-full z-10 flex justify-between md:justify-evenly bg-secondary text-primary py-2 pt-3 text-lg items-center">
+        <div className="flex bg-primary rounded-md items-center justify-center p-1 md:hidden" onClick={open}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="white"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
         <div className="flex text-primary rounded-md items-center justify-center gap-1">
           <Image height={35} width={35} src="/logo.svg" alt="logo" />
           <span className="font-semibold font-poppins text-xl">
             Nikhivishwa
           </span>
         </div>
-        <div className={`flex gap-7 font-mulish text-base font-bold items-end ${styles.spacing}`}>
+        <div
+          className={`hidden md:flex gap-4 lg:gap-7 font-mulish text-base font-bold items-end ${styles.spacing}`}
+        >
           {Object.keys(pathList).map((key, i) => (
             <Link href={key} key={i}>
               <span
@@ -35,8 +53,8 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="flex bg-[#0a0a68] text-white py-2 px-3 rounded-md items-center justify-center gap-1">
-          <span className="font-medium font-mulish text-base">
+        <div className="flex bg-[#0a0a68] text-white md:py-2 md:px-3 p-[2px] rounded-md items-center justify-center gap-1">
+          <span className="font-medium font-mulish text-base hidden md:inline">
             Let&apos;s Chat
           </span>
           <svg
