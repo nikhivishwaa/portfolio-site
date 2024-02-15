@@ -60,7 +60,9 @@ export default function App({ Component, pageProps }) {
           poppins.variable,
         ].join(" ")}
       >
-        <Navbar />
+        <main className="relative">
+          <Navbar />
+        </main>
         <Component {...pageProps} />
         <Footer />
       </main>

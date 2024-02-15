@@ -2,9 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/Utility.module.css";
+import Slidebar from "./Slidebar";
+import { useState } from "react";
 
 export default function Navbar() {
   const { asPath } = useRouter();
+  const [isopen, setIsOpen] = useState(false);
   const pathList = {
     "/": "Home",
     "/about": "About",
@@ -13,17 +16,28 @@ export default function Navbar() {
     "/pricing": "Pricing",
     "/blog": "Blog",
   };
+  const open = () => {
+    setIsOpen(true);
+    console.log("open");
+  };
+  const close = () => {
+    setIsOpen(false);
+    console.log("close");
+  };
   return (
     <>
       <nav className="px-2 md:px-0 sticky top-0 w-full z-10 flex justify-between md:justify-evenly bg-secondary text-primary py-2 pt-3 text-lg items-center">
-        <div className="flex bg-primary rounded-md items-center justify-center p-1 md:hidden" onClick={open}>
+        <div
+          className="flex text-primary rounded-md items-center justify-center p-1 md:hidden gap-2"
+          onClick={open}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            fill="currentColor"
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="white"
-            className="w-6 h-6"
+            className="w-6 h-6 bg-primary p-1 rounded-[4px] border-2 border-white"
           >
             <path
               strokeLinecap="round"
@@ -31,13 +45,30 @@ export default function Navbar() {
               d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
             />
           </svg>
-        </div>
-        <div className="flex text-primary rounded-md items-center justify-center gap-1">
-          <Image height={35} width={35} src="/logo.svg" alt="logo" />
-          <span className="font-semibold font-poppins text-xl">
-            Nikhivishwa
+          <span className="capitalize font-mulish text-sm font-semibold">
+            {asPath.length > 1 ? asPath.slice(1) : "home"}
           </span>
         </div>
+        <Link href={"/"}>
+          <div className="flex text-primary rounded-md items-center justify-center gap-1">
+            <Image
+              height={35}
+              width={35}
+              src="/logo.svg"
+              alt="logo"
+              className="aspect-[1/1] w-[25px] md:w-[35px]"
+            />
+            <span className="font-semibold font-poppins text-base sm:text-xl">
+              Nikhivishwa
+            </span>
+          </div>
+        </Link>
+        <Slidebar
+          pathList={pathList}
+          asPath={asPath}
+          close={close}
+          open={isopen}
+        />
         <div
           className={`hidden md:flex gap-4 lg:gap-7 font-mulish text-base font-bold items-end ${styles.spacing}`}
         >
