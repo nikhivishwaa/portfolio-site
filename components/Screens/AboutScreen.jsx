@@ -66,8 +66,8 @@ export default function AboutScreen() {
   return (
     <>
       <div className="flex flex-col justify-center items-stretch bg-screen">
-        <section className="flex flex-row justify-evenly items-center">
-          <div className="flex flex-col justify-center items-center w-1/2">
+        <section className="flex flex-col md:flex-row justify-evenly items-center">
+          <div className="flex flex-col justify-center items-center md:w-1/2">
             <div className="flex gap-8 text-sm font-bold font-mulish tracking-widest">
               <button
                 className={`py-2 px-5 ${styles["primary-btn"]} ${styles["spacing"]}`}
@@ -76,7 +76,7 @@ export default function AboutScreen() {
               </button>
             </div>
           </div>
-          <div className="flex flex-col gap-5 justify-center items-start p-5 w-1/2 border-spacing-1 border-red-800">
+          <div className="flex flex-col gap-5 justify-center items-start p-5 md:w-1/2 border-spacing-1 border-red-800">
             <h1 className={`text-2xl font-mulish font-bold text-secondary`}>
               About Nikhil
             </h1>
