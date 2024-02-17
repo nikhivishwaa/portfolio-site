@@ -32,7 +32,7 @@ export default function SkillsScreen() {
   ]);
   return (
     <>
-      <div className="flex flex-col p-5 bg-screen">
+      <div className="flex flex-col flex-wrap p-5 bg-screen">
         <section className="flex flex-col gap-3 items-center justify-center">
           <span className="font-mulish text-[22px] font-bold text-secondary">
             What We Do
