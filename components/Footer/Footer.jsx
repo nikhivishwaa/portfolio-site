@@ -21,7 +21,7 @@ export default function Footer() {
           <span className="font-semibold text-primary">Contact Us</span>
           <hr style={{ border: "2px solid red", width: "135px" }} />
         </div>
-        <div className="flex justify-center gap-7 pt-3">
+        <div className="flex justify-center pgap-4 md:gap-7 pt-3">
           {Object.keys(socials).map((key) => (
             <Link href={socials[key]} target="_blank" key={key}>
               <Image

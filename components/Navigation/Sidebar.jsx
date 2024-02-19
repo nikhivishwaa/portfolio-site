@@ -11,7 +11,7 @@ export default function Sidebar(props) {
   return (
     <>
       <div
-        className={`sticky px-5 py-3 top-[50px] gap-4 bg-[rgb(220 241 255)] h-full flex flex-col font-mulish font-bold z-10 text-base ${
+        className={`sticky px-5 py-3 top-[50px] gap-4 bg-[#dcf1ff] h-full flex flex-col font-mulish font-bold z-10 text-base ${
           sidebar ? "" : "hidden"
         }`}
         onBlur={() => {
