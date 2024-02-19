@@ -5,6 +5,9 @@ import Head from "next/head";
 // importing fonts
 import { Lexend, Exo, Inter, Mulish, Mitr, Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
+import NavContext from "@/Context/NavContext";
+import { useState } from "react";
+import Sidebar from "@/components/Navigation/Sidebar";
 
 const mitr = Mitr({
   subsets: ["latin"],
@@ -26,6 +29,15 @@ const mulish = Mulish({
 });
 
 export default function App({ Component, pageProps }) {
+  const [sidebar, setSidebar] = useState(true);
+  const [pathList, setPathList] = useState({
+    "/": "Home",
+    "/about": "About",
+    "/portfolio": "Portfolio",
+    "/contact": "Contact",
+    "/pricing": "Pricing",
+    "/blog": "Blog",
+  });
   return (
     <>
       <Head>
@@ -60,10 +72,15 @@ export default function App({ Component, pageProps }) {
           poppins.variable,
         ].join(" ")}
       >
-        <main className="relative">
-          <Navbar />
-        </main>
-        <Component {...pageProps} />
+        <NavContext.Provider value={{ sidebar, setSidebar, pathList }}>
+          <main className="sticky top-0 w-full z-10">
+            <Navbar />
+          </main>
+            <Sidebar />
+          {/* <main className="flex w-full justify-center items-center bg-screen"> */}
+            <Component {...pageProps} />
+          {/* </main> */}
+        </NavContext.Provider>
         <Footer />
       </main>
     </>

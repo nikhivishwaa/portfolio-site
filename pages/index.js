@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <section>
         <HomeScreen />
+        <AboutScreen />
       </section>
-      <AboutScreen />
     </>
   );
 }

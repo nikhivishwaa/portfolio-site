@@ -2,34 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/Utility.module.css";
-import Slidebar from "./Slidebar";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import NavContext from "@/Context/NavContext";
 
 export default function Navbar() {
   const { asPath } = useRouter();
-  const [isopen, setIsOpen] = useState(false);
-  const pathList = {
-    "/": "Home",
-    "/about": "About",
-    "/portfolio": "Portfolio",
-    "/contact": "Contact",
-    "/pricing": "Pricing",
-    "/blog": "Blog",
-  };
-  const open = () => {
-    setIsOpen(true);
-    console.log("open");
-  };
-  const close = () => {
-    setIsOpen(false);
-    console.log("close");
-  };
+  const context = useContext(NavContext);
+  const { pathList, setSidebar } = context;
+
   return (
     <>
-      <nav className="px-2 md:px-0 sticky top-0 w-full z-10 flex justify-between md:justify-evenly bg-secondary text-primary py-2 pt-3 text-lg items-center">
+      <nav className="px-2 md:px-0 sticky top-0 z-10 w-full flex justify-between md:justify-evenly bg-secondary text-primary py-2 pt-3 text-lg items-center">
         <div
           className="flex text-primary rounded-md items-center justify-center p-1 md:hidden gap-2"
-          onClick={open}
+          onClick={() => context.setSidebar(true)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -63,12 +49,6 @@ export default function Navbar() {
             </span>
           </div>
         </Link>
-        <Slidebar
-          pathList={pathList}
-          asPath={asPath}
-          close={close}
-          open={isopen}
-        />
         <div
           className={`hidden md:flex gap-4 lg:gap-7 font-mulish text-base font-bold items-end ${styles.spacing}`}
         >
