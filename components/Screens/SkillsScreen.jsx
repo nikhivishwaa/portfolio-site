@@ -45,7 +45,7 @@ export default function SkillsScreen() {
             <span className="text-4xl font-black">.</span>
           </span>
         </section>
-        <section className="flex gap-10 my-12 justify-center items-center">
+        <section className="flex gap-10 my-12 flex-wrap justify-center items-center">
           {skills.map((plan, key) => (
             <SkillCard skill={plan} key={key} />
           ))}

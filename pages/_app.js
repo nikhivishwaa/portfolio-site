@@ -29,7 +29,7 @@ const mulish = Mulish({
 });
 
 export default function App({ Component, pageProps }) {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
   const [pathList, setPathList] = useState({
     "/": "Home",
     "/about": "About",

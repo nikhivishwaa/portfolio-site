@@ -6,11 +6,11 @@ export default function HaveProject() {
   return (
     <>
       <div
-        className={`p-8 flex justify-between w-2/3 ${styles["primary-card"]} relative`}
+        className={`p-8 flex md:flex-nowrap flex-wrap-reverse justify-between w-2/3 ${styles["primary-card"]} relative`}
       >
         <div className="flex flex-col gap-3 font-bold font-mulish">
           <span className={`text-secondary text-base`}>Get It Touch</span>
-          <span className="font-poppins text-4xl">
+          <span className="font-poppins text-4xl ">
             Have a Project on Your Mind
           </span>
           <span>
@@ -35,7 +35,7 @@ export default function HaveProject() {
             </button>
           </span>
         </div>
-        <div className="">
+        <div className="border-2">
           <span
             className="absolute bottom-0 right-0 h-full w-1/3"
             style={{ backgroundImage: "url('/logo/contactDots.png')" }}
