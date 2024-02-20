@@ -22,7 +22,7 @@ export async function getStaticProps(ctx) {
     home: {
       name: "Nikhil V.",
       profile: "Full Stack Engineer",
-      bio: "I am passionate about Develpoment, Machine Learning and ML model Training, have a strong Communication skills, having 2+ years of experience in Web Development",
+      bio: "I am passionate about Development, Machine Learning and ML model Training, have a strong Communication skills, having 2+ years of experience in Web Development",
       cvUrl: "/media/resume.pdf",
     },
     about: {
