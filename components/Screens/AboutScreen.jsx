@@ -80,7 +80,7 @@ export default function AboutScreen() {
             <h1 className={`text-2xl font-mulish font-bold text-secondary`}>
               About Nikhil
             </h1>
-            <p className={`text-5xl font-bold text-balance ${styles.spacing}`}>
+            <p className={`max-xs:text-4xl xs:text-5xl font-bold text-balance ${styles.spacing}`}>
               2 Year&apos;s Experience on Web{" "}
               <span className="text-secondary">Development</span>{" "}
             </p>
@@ -90,7 +90,7 @@ export default function AboutScreen() {
               eius perspiciatis!
             </p>
             <div
-              className={`flex gap-8 text-sm font-bold font-mulish tracking-widest ${styles.spacing}`}
+              className={`flex gap-3 xs:gap-8 text-sm font-bold font-mulish tracking-widest ${styles.spacing}`}
             >
               {Informations.map((key, i) => (
                 <button

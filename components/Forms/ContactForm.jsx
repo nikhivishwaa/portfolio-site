@@ -31,14 +31,14 @@ export default function ContactForm() {
   return (
     <>
       <form
-        className={`max-w-96 min-w-72 p-8 px-4 flex flex-col gap-3 font-mulish ${styles.form}`}
+        className={`max-xxs:w-11/12 max-xxs:mx-auto xs:max-w-96 xs:min-w-72 p-8 px-4 flex flex-col gap-3 font-mulish justify-center items-center ${styles.form}`}
         onSubmit={submitMessage}
       >
-        <div className="flex gap-2 justify-between">
+        <div className="max-xs:w-full flex gap-2 justify-between max-xs:justify-center max-xs:gap-3 max-xs:flex-col">
           <input
             onChange={handleChange}
             value={formData.firstname}
-            className="w-1/2 p-4 py-2 border rounded-sm font-medium"
+            className="max-xs:w-full xs:w-1/2 p-4 py-2 border rounded-sm font-medium"
             type="text"
             name="firstname"
             required
@@ -47,7 +47,7 @@ export default function ContactForm() {
           <input
             onChange={handleChange}
             value={formData.lastname}
-            className="w-1/2 p-4 py-2 border rounded-sm font-medium"
+            className="max-xs:w-full xs:w-1/2 p-4 py-2 border rounded-sm font-medium"
             type="text"
             name="lastname"
             placeholder="Last Name"
@@ -56,7 +56,7 @@ export default function ContactForm() {
         <input
           onChange={handleChange}
           value={formData.email}
-          className="p-4 py-2 border rounded-sm font-medium"
+          className="w-full p-4 py-2 border rounded-sm font-medium"
           type="email"
           name="email"
           placeholder="Email"
@@ -65,7 +65,7 @@ export default function ContactForm() {
         <input
           onChange={handleChange}
           value={formData.subject}
-          className="p-4 py-2 border rounded-sm font-medium"
+          className="w-full p-4 py-2 border rounded-sm font-medium"
           type="text"
           name="subject"
           placeholder="Subject"
@@ -77,7 +77,7 @@ export default function ContactForm() {
           cols="30"
           rows="4"
           placeholder="Message"
-          className="p-4 py-2 border rounded-sm font-medium"
+          className="w-full p-4 py-2 border rounded-sm font-medium"
           required
         ></textarea>
         <button type="submit" ref={ref} className="hidden">

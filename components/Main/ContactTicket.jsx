@@ -6,18 +6,18 @@ export default function ContactTicket() {
   return (
     <>
       <div
-        className={`max-w-96 min-w-72 pt-8 flex flex-col gap-3 font-mulish h-full ${styles.contact}`}
+        className={`max-xxs:w-[240px] xxs:max-w-96 xxs:min-w-72 xxs:pt-8 flex flex-col gap-3 font-mulish sm:h-[405px] ${styles.contact}`}
       >
         <Image
           src={"/logo/support.png"}
-          height={235}
-          width={352}
-          className="mx-4 rounded-[6px]"
+          height={100}
+          width={100}
+          className="mx-auto xs:mx-4 rounded-[6px] xs:w-[352px] aspect-[3/2] w-11/12 max-xxs:hidden object-cover"
           alt="contact us"
         />
 
-        <span
-          className={`${styles["purple-card"]} flex justify-start items-center gap-4 p-4 py-6`}
+        <div
+          className={`${styles["purple-card"]} flex justify-start items-center gap-4 p-4 py-6 max-xxs:px-0 max-xxs:flex-col`}
         >
           <span className={`rounded-lg p-4 border ${styles["inset-icon"]}`}>
             <svg
@@ -35,11 +35,11 @@ export default function ContactTicket() {
               />
             </svg>
           </span>
-          <div className="flex flex-col justify-start font-medium text-base font-poppins">
+          <div className="flex flex-col justify-start font-medium text-base font-poppins max-xxs:text-sm">
             <p>+91 9685269754</p>
             <p>nikhivishwa@gmail.com</p>
           </div>
-        </span>
+        </div>
       </div>
     </>
   );

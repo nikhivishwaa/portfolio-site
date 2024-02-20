@@ -17,18 +17,18 @@ export default function HomeScreen() {
         <div
           className={`md:w-1/2 xl:w-4/12 flex font-poppins flex-col gap-1 font-bold justify-center md:items-start items-center ${styles.spacing}`}
         >
-          <p className="text-[42px]">
+          <p className="text-3xl xxs:text-[42px]">
             Hi I&apos;m&nbsp;
             <span className="text-secondary">Nikhil V.</span>
           </p>
-          <p className="text-2xl font-poppins">Full Stack Engineer</p>
+          <p className="xxs:text-2xl text-xl font-poppins">Full Stack Engineer</p>
           <p className="text-xs py-3 font-poppins font-medium text-gray-500 overflow-hidden text-pretty text-ellipsis h-[40px] ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga odit
             eius pariatur nostrum perferendis iste quaerat ex sit non ea,
             dolorum nesciunt? Iste repudiandae et ullam quasi, unde minima
             impedit?
           </p>
-          <div className="flex py-4 gap-6 text-xs font-bold font-mulish">
+          <div className="flex py-4 gap-6 text-xs font-bold font-mulish flex-wrap-reverse justify-center items-center">
             <button
               className={`rounded-sm py-3 px-6 ${styles["secondary-btn"]} ${styles["spacing"]}`}
               onClick={(e) => handleClick(e)}

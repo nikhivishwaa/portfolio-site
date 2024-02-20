@@ -64,7 +64,7 @@ export default function PortfolioScreen() {
             ))} */}
           </div>
         </section>
-        <section className="flex gap-10 my-12 justify-center items-center flex-wrap">
+        <section className="flex gap-8 my-12 justify-center items-center flex-wrap">
           {skills.map((plan, key) => (
             <CreativeWork work={plan} key={key} />
           ))}

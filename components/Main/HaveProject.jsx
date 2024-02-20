@@ -35,7 +35,7 @@ export default function HaveProject() {
             </button>
           </span>
         </div>
-        <div className="border-2 max-md:hidden">
+        <div className="md:flex hidden">
           <span
             className="absolute bottom-0 right-0 h-full w-1/3"
             style={{ backgroundImage: "url('/logo/contactDots.png')" }}

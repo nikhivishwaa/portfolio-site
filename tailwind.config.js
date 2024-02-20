@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+import defaultTheme from "tailwindcss/defaultTheme";
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -30,8 +33,8 @@ module.exports = {
         secondary: "#ff0075",
       },
       screens: {
-        "xsm": { max: "450px" },
-        "xxsm": { max: "350px" },
+        xs: "420px",
+        xxs: "340px",
       },
     },
   },
