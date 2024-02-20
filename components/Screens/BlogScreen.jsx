@@ -87,7 +87,7 @@ export default function BlogScreen() {
             Our Latest News & Posts
           </span>
         </section>
-        <section className="flex gap-10 my-12 justify-center items-center">
+        <section className="flex gap-10 my-12 justify-center items-center flex-wrap">
           {blogslide.map((blog, key) => (
             <BlogCard blog={blog} key={key} />
           ))}

@@ -29,6 +29,10 @@ module.exports = {
         primary: "#0a0a68",
         secondary: "#ff0075",
       },
+      screens: {
+        "xsm": { max: "450px" },
+        "xxsm": { max: "350px" },
+      },
     },
   },
   plugins: [],

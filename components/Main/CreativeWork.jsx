@@ -12,10 +12,10 @@ export default function CreativeWork(props) {
   return (
     <>
       <div
-        className={`flex p-1 justify-center items-center w-1/3  text-primary ${styles["primary-card"]}`}
+        className={`m-auto max-sm:flex-col-reverse max-sm:w-10/12 flex p-1 justify-center items-center sm:w-[485px] lg:w-1/3  text-primary ${styles["primary-card"]}`}
       >
         <div
-          className={`flex flex-col gap-[6px] p-5 pl-6 capitalize justify-center items-start w-1/2`}
+          className={`flex flex-col gap-[6px] p-5 pl-6 capitalize justify-center items-start sm:w-1/2`}
         >
           <span
             className={`rounded-md px-3 py-1 pt-2 border ${styles["inset-icon"]} font-poppins font-semibold text-[10px]`}
@@ -54,7 +54,7 @@ export default function CreativeWork(props) {
             </Link>
           </button>
         </div>
-        <div className="flex justify-center items-center w-1/2">
+        <div className="flex justify-center items-center sm:w-1/2">
           <Image
             src={"/logo/contactCutout.png"}
             height={230}

@@ -49,9 +49,9 @@ export default function PortfolioScreen() {
             My Creative Works
           </span>
           <div
-            className={`my-8 flex justify-center-items-center font-mulish font-bold text-xs ${styles["joint-btn"]}`}
+            className={`max-sm:w-11/12 my-8 flex justify-center items-center font-mulish font-bold text-xs text-nowrap box-border ${styles["joint-btn"]} max-sm:overflow-x-scroll`}
           >
-            {allSection.map((s, i) => (
+            {/* {allSection.map((s, i) => (
               <button
                 key={i}
                 className={`py-[10px] px-4 ${
@@ -61,7 +61,7 @@ export default function PortfolioScreen() {
               >
                 {s}
               </button>
-            ))}
+            ))} */}
           </div>
         </section>
         <section className="flex gap-10 my-12 justify-center items-center flex-wrap">

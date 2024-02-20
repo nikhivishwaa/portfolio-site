@@ -10,7 +10,7 @@ export default function HaveProject() {
       >
         <div className="flex flex-col gap-3 font-bold font-mulish">
           <span className={`text-secondary text-base`}>Get It Touch</span>
-          <span className="font-poppins text-4xl ">
+          <span className="font-poppins text-4xl max-md:w-full max-lg:w-4/6 max-xl:w-5/6">
             Have a Project on Your Mind
           </span>
           <span>
@@ -35,7 +35,7 @@ export default function HaveProject() {
             </button>
           </span>
         </div>
-        <div className="border-2">
+        <div className="border-2 max-md:hidden">
           <span
             className="absolute bottom-0 right-0 h-full w-1/3"
             style={{ backgroundImage: "url('/logo/contactDots.png')" }}
@@ -51,7 +51,7 @@ export default function HaveProject() {
             src={"/logo/contactCutout.png"}
             width={200}
             height={277}
-            className="absolute bottom-0 right-20 drop-shadow"
+            className="absolute bottom-0 right-20 max-lg:right-5 drop-shadow"
             alt="contact us"
           />
         </div>

@@ -18,7 +18,7 @@ export default function ContactmeScreen() {
             Contact Me
           </span>
           <span
-            className={`text-[34px] font-poppins font-bold text-center ${styles.spacing}`}
+            className={`text-[34px] font-poppins font-bold text-center ${styles.spacing} text-wrap`}
           >
             Get in Touch With Me
           </span>
@@ -37,7 +37,7 @@ export default function ContactmeScreen() {
           <span className="font-mulish mt-2 text-[16px] font-bold text-secondary justify-self-start">
             Contact Me
           </span>
-          <div className="flex gap-10 my-2 justify-center items-center">
+          <div className="flex gap-10 my-2 justify-center items-center max-md:hidden">
             <span className="font-mulish text-[24px] font-bold w-96">
               Get in Touch With Me
             </span>
@@ -46,7 +46,7 @@ export default function ContactmeScreen() {
               ratione consequuntur nisi!
             </span>
           </div>
-          <div className="flex gap-10 my-2 justify-center items-center">
+          <div className="flex gap-10 my-2 justify-center items-center max-md:flex-col">
             <ContactForm />
             <ContactTicket />
           </div>
