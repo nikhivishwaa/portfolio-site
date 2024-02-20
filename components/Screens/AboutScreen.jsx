@@ -102,7 +102,10 @@ export default function AboutScreen() {
                   onClick={() => handleInfoSection(key)}
                   key={i}
                 >
-                  {key}
+                  {
+                    key === infoSection
+                      ? key
+                      : <Image src={`/icons/${key!=="main skills"?key:"skills"}.svg`} alt={key} height={20} width={20}/>}
                 </button>
               ))}
             </div>
