@@ -2,77 +2,16 @@ import React, { useState } from "react";
 import BlogCard from "../Main/BlogCard";
 import styles from "@/styles/Utility.module.css";
 
-export default function BlogScreen() {
+export default function BlogScreen(props) {
   const [active, setActive] = useState(0);
-  const [blogs, setBlogs] = useState([
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      title:
-        "Have Developed Machine Learning and Deep Learning Models for the companies as per the requirements",
-      url: "/",
-    },
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      title:
-        "Have Developed Machine Learning and Deep Learning Models for the companies as per the requirements",
-      url: "/",
-    },
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      title:
-        "Have Developed Machine Learning and Deep Learning Models for the companies as per the requirements",
-      url: "/",
-    },
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      title: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-  ]);
+  const [blogs, setBlogs] = useState(props.data);
   const [blogslide, setBlogslide] = useState(blogs.slice(0, 4));
   const changeSlide = (i) => {
     setActive(i);
     const startIndex = i * 4;
-    const endIndex =
-      i * 4 + 4 <= blogs.length ? i * 4 + 4 : blogs.length;
+    const endIndex = i * 4 + 4 <= blogs.length ? i * 4 + 4 : blogs.length;
     setBlogslide(blogs.slice(startIndex, endIndex));
-    console.log(blogs.length, startIndex, endIndex)
+    console.log(blogs.length, startIndex, endIndex);
   };
   return (
     <>

@@ -2,37 +2,10 @@ import React, { useState } from "react";
 import styles from "@/styles/Utility.module.css";
 import CreativeWork from "../Main/CreativeWork";
 
-export default function PortfolioScreen() {
+export default function PortfolioScreen(props) {
   const [active, setActive] = useState("All Works");
-  const [skills, setSkills] = useState([
-    {
-      title: "web development work done by",
-      desc: "Have Developed Machine Learning and Deep Learning Models for the companies as per the requirements",
-      url: "/",
-    },
-    {
-      title: "web development work done by today",
-      desc: "Have Developed Machine Learning and Deep Learning Models for the companies as per the requirements",
-      url: "/",
-    },
-    {
-      title: "web development work done by today",
-      desc: "Have Developed Machine Learning and Deep Learning Models for the companies as per the requirements",
-      url: "/",
-    },
-    {
-      title: "web development work done by today",
-      desc: "Have Developed Machine Learning and Deep Learning Models for the companies as per the requirements",
-      url: "/",
-    },
-  ]);
-  let allSection = [
-    "All Works",
-    "Web Development",
-    "App Development",
-    "Data Analysis",
-    "ML/DL Models",
-  ];
+  const [skills, setSkills] = useState(props.data.projectList);
+  const allSection = props.data.allSection;
   const chaneActive = (s) => {
     setActive(s);
   };

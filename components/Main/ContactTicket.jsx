@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import styles from "@/styles/Utility.module.css";
 import Image from "next/image";
 
-export default function ContactTicket() {
+export default function ContactTicket(props) {
   return (
     <>
       <div
@@ -36,8 +36,8 @@ export default function ContactTicket() {
             </svg>
           </span>
           <div className="flex flex-col justify-start font-medium text-base font-poppins max-xxs:text-sm">
-            <p>+91 9685269754</p>
-            <p>nikhivishwa@gmail.com</p>
+            <p>{props.data.phone}</p>
+            <p>{props.data.email}</p>
           </div>
         </div>
       </div>

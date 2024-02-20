@@ -4,7 +4,7 @@ import CreativeWork from "../Main/CreativeWork";
 import ContactForm from "../Forms/ContactForm";
 import ContactTicket from "../Main/ContactTicket";
 
-export default function ContactmeScreen() {
+export default function ContactmeScreen(props) {
   const [active, setActive] = useState("All Works");
   const [skills, setSkills] = useState([]);
   const chaneActive = (s) => {
@@ -46,9 +46,9 @@ export default function ContactmeScreen() {
               ratione consequuntur nisi!
             </span>
           </div> */}
-          <div className="flex gap-5 lg:gap-10 my-2 justify-center items-center flex-wrap max-xs:flex-col">
+          <div className="flex gap-5 lg:gap-10 my-2 justify-center items-center flex-wrap">
             <ContactForm />
-            <ContactTicket />
+            <ContactTicket data={props.data} />
           </div>
         </section>
         <section className="flex flex-col"></section>

@@ -3,33 +3,8 @@ import styles from "@/styles/Utility.module.css";
 import PricingCard from "../Main/PricingCard";
 import SkillCard from "../Main/SkillCard";
 
-export default function SkillsScreen() {
-  const [skills, setSkills] = useState([
-    {
-      active: false,
-      skill: "web development",
-      desc: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      active: false,
-      skill: "app development",
-      desc: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      active: false,
-      skill: "data analysis",
-      desc: "yes i am doibg this since my 2nd year",
-      url: "/",
-    },
-    {
-      active: false,
-      skill: "ML | DL models",
-      desc: "Have Developed Machine Learning and Deep Learning Models for the companies as per the requirements",
-      url: "/",
-    },
-  ]);
+export default function SkillsScreen({ data }) {
+  const [skills, setSkills] = useState(data);
   return (
     <>
       <div className="flex flex-col flex-wrap p-5 bg-screen">

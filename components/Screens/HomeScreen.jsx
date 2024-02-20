@@ -2,10 +2,11 @@ import React from "react";
 import styles from "@/styles/Utility.module.css";
 import Image from "next/image";
 import FloatIcon from "../Main/FloatIcon";
+import Link from "next/link";
 
-export default function HomeScreen() {
+export default function HomeScreen(props) {
   const handleClick = (e) => {
-    console.log("button clicked");
+    console.log("cv...");
   };
 
   return (
@@ -19,14 +20,13 @@ export default function HomeScreen() {
         >
           <p className="text-3xl xxs:text-[42px]">
             Hi I&apos;m&nbsp;
-            <span className="text-secondary">Nikhil V.</span>
+            <span className="text-secondary">{props.data.name}</span>
           </p>
-          <p className="xxs:text-2xl text-xl font-poppins">Full Stack Engineer</p>
-          <p className="text-xs py-3 font-poppins font-medium text-gray-500 overflow-hidden text-pretty text-ellipsis h-[40px] ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga odit
-            eius pariatur nostrum perferendis iste quaerat ex sit non ea,
-            dolorum nesciunt? Iste repudiandae et ullam quasi, unde minima
-            impedit?
+          <p className="xxs:text-2xl text-xl font-poppins">
+            {props.data.profile}
+          </p>
+          <p className="text-xs py-3 font-poppins font-medium text-gray-500 overflow-hidden text-pretty text-ellipsis h-[44px] ">
+            {props.data.bio}
           </p>
           <div className="flex py-4 gap-6 text-xs font-bold font-mulish flex-wrap-reverse justify-center items-center">
             <button
@@ -35,18 +35,20 @@ export default function HomeScreen() {
             >
               Hire Me
             </button>
-            <button
-              className={`flex gap-1 items-center rounded-sm py-3 px-4 ${styles["primary-btn"]}  ${styles["spacing"]}`}
-              onClick={(e) => handleClick(e)}
-            >
-              <span>Download CV</span>
-              <Image
-                src="/icons/downloadFile.svg"
-                width={16}
-                height={16}
-                alt="download"
-              />
-            </button>
+            <Link href={props.data.cvUrl} target="_blank">
+              <button
+                className={`flex gap-1 items-center rounded-sm py-3 px-4 ${styles["primary-btn"]}  ${styles["spacing"]}`}
+                onClick={(e) => handleClick(e)}
+              >
+                <span>Download CV</span>
+                <Image
+                  src="/icons/downloadFile.svg"
+                  width={16}
+                  height={16}
+                  alt="download"
+                />
+              </button>
+            </Link>
           </div>
           <div className="lg:flex justify-end w-full hidden">
             <FloatIcon src="/logo/NextJS.png" logoClass="rounded-full" />
