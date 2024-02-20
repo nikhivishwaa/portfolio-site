@@ -46,7 +46,7 @@ export default function ContactmeScreen() {
               ratione consequuntur nisi!
             </span>
           </div> */}
-          <div className="flex gap-5 lg:gap-10 my-2 justify-center items-center flex-wrap xs:flex-col">
+          <div className="flex gap-5 lg:gap-10 my-2 justify-center items-center flex-wrap max-xs:flex-col">
             <ContactForm />
             <ContactTicket />
           </div>
