@@ -6,18 +6,18 @@ export default function ContactTicket(props) {
   return (
     <>
       <div
-        className={`max-xxs:w-[240px] xxs:max-w-96 xxs:min-w-72 xxs:pt-8 flex flex-col gap-3 font-mulish sm:h-[405px] ${styles.contact}`}
+        className={`max-xxs:w-[240px] max-xs:w-[290px] xs:max-w-96 xs:min-w-72 xs:pt-8 flex flex-col gap-3 font-mulish sm:h-[405px] ${styles.contact}`}
       >
         <Image
           src={"/logo/support.png"}
-          height={100}
-          width={100}
-          className="mx-auto xs:mx-4 rounded-[6px] xs:w-[352px] aspect-[3/2] w-11/12 max-xxs:hidden object-cover"
+          height={250}
+          width={350}
+          className="mx-auto xs:mx-4 rounded-[6px] xs:w-[352px] aspect-[3/2] w-11/12 max-xs:hidden object-cover"
           alt="contact us"
         />
 
         <div
-          className={`${styles["purple-card"]} flex justify-start items-center gap-4 p-4 py-6 max-xxs:px-0 max-xxs:flex-col`}
+          className={`${styles["purple-card"]} flex justify-start items-center gap-4 p-4 py-6 max-xxs:px-0 max-xs:flex-col`}
         >
           <span className={`rounded-lg p-4 border ${styles["inset-icon"]}`}>
             <svg
@@ -35,7 +35,7 @@ export default function ContactTicket(props) {
               />
             </svg>
           </span>
-          <div className="flex flex-col justify-start font-medium text-base font-poppins max-xxs:text-sm">
+          <div className="flex flex-col justify-start font-medium text-base font-poppins max-xxs:text-sm  max-xs:items-center">
             <p>{props.data.phone}</p>
             <p>{props.data.email}</p>
           </div>
