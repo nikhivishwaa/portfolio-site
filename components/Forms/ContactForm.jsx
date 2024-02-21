@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import styles from "@/styles/Utility.module.css";
+import axios from "axios";
 
 export default function ContactForm() {
   const ref = useRef(null);
@@ -13,9 +14,8 @@ export default function ContactForm() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const submitMessage = (e) => {
+  const submitMessage = async (e) => {
     e.preventDefault();
-    const data = JSON.stringify(formData);
     setTimeout(
       () =>
         setFormData({
@@ -27,6 +27,13 @@ export default function ContactForm() {
         }),
       100
     );
+    const res = await (
+      await fetch("/api/contact/", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      })
+    ).json();
+    console.log(res);
   };
   return (
     <>
