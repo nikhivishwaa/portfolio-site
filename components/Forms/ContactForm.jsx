@@ -92,8 +92,16 @@ export default function ContactForm() {
         </button>
         <span className="my-2 mt-3">
           <button
-            className={`flex gap-1 text-xs font-semibold py-2 px-4 ${styles["secondary-btn"]} ${styles.spacing}`}
+            className={`cursor-pointer flex gap-1 text-xs font-semibold py-2 px-4 ${styles["secondary-btn"]} ${styles.spacing}`}
             onClick={() => ref.current.click()}
+            disabled={
+              !(
+                formData.firstname.length >= 3 &&
+                formData.lastname.length >= 3 &&
+                formData.subject.length >= 3 &&
+                formData.message.length >= 3
+              )
+            }
           >
             <span>Submit Now</span>
             <svg
