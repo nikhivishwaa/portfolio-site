@@ -11,7 +11,7 @@ function Cancellation() {
           <span className="text-blue-900 font-bold underline underline-offset-4">
             Nikhil Vishwakarma
           </span>
-          &nbsp;("Developer") strives to provide high-quality services to all
+          &nbsp;(&quot;Developer&quot;) strives to provide high-quality services to all
           clients. However, we understand that circumstances may arise that
           require cancellations or refunds. This Cancellation and Refund Policy
           outlines the terms and conditions related to cancellations and refunds
@@ -23,7 +23,7 @@ function Cancellation() {
           >
             nikhivishwa.me
           </Link>{" "}
-          website ("Website").
+          website (&quot;Website&quot;).
         </p>
         <ul className="flex flex-col gap-5">
           <li>
@@ -157,7 +157,7 @@ function Cancellation() {
           </li>
 
           <p>
-            By using the Website and engaging the Developer's services, you
+            By using the Website and engaging the Developer&apos;s services, you
             agree to the terms and conditions of this Cancellation and Refund
             Policy.
           </p>

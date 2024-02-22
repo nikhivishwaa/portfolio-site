@@ -11,7 +11,7 @@ function privacyPolicy() {
           <span className="text-blue-900 font-bold underline underline-offset-4">
             Nikhil Vishwakarma
           </span>
-          &nbsp;("Developer") is committed to protecting the privacy of visitors
+          &nbsp;(&quot;Developer&quot;) is committed to protecting the privacy of visitors
           to the{" "}
           <Link
             href={"https://nikhivishwa.me/"}
@@ -20,7 +20,7 @@ function privacyPolicy() {
           >
             nikhivishwa.me
           </Link>{" "}
-          website ("Website"). This Privacy Policy outlines how personal
+          website (&quot;Website&quot;). This Privacy Policy outlines how personal
           information is collected, used, and disclosed by the Developer.
         </p>
         <ul className="flex flex-col gap-5">
@@ -119,7 +119,7 @@ function privacyPolicy() {
           </li>
           <li className="list-item">
             <h4 className="font-semibold text-lg font-poppins">
-              Children's Privacy
+              Children&apos;s Privacy
             </h4>
             <p className="ml-5">
               The Website is not intended for children under the age of 13. The

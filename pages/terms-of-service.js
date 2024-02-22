@@ -8,7 +8,7 @@ function termsOfService() {
           Terms and Conditions
         </h1>
         <p>
-          These terms and conditions ("Terms") govern your use of the{" "}
+          These terms and conditions (&quot;Terms&quot;) govern your use of the{" "}
           <Link
             href={"https://nikhivishwa.me/"}
             target="_blank"
@@ -16,14 +16,14 @@ function termsOfService() {
           >
             nikhivishwa.me
           </Link>{" "}
-          website ("Website") and your engagement with{" "}
+          website (&quot;Website&quot;) and your engagement with{" "}
           <span className="text-blue-900 font-bold underline underline-offset-4">
             Nikhil Vishwakarma
           </span>
-          &nbsp;("Developer"), a full-stack developer. By accessing the Website
+          &nbsp;(&quot;Developer&quot;), a full-stack developer. By accessing the Website
           and/or placing an order for services, you agree to comply with and be
           bound by these Terms. If you do not agree with any part of these
-          Terms, please do not use the Website or engage the Developer's
+          Terms, please do not use the Website or engage the Developer&apos;s
           services.
         </p>
         <ul className="flex flex-col gap-5">
@@ -34,7 +34,7 @@ function termsOfService() {
             <p className="ml-5">
               The Developer offers full-stack development services, including
               but not limited to website design, development, maintenance, and
-              consultation ("Services").
+              consultation (&quot;Services&quot;).
             </p>
           </li>
           <li>
@@ -178,7 +178,7 @@ function termsOfService() {
           </li>
         </ul>
         <p className="ml-5">
-          By using the Website or engaging the Developer's services, you
+          By using the Website or engaging the Developer&apos;s services, you
           acknowledge that you have read, understood, and agree to be bound by
           these Terms.{" "}
         </p>
