@@ -8,6 +8,8 @@ import Footer from "@/components/Footer/Footer";
 import NavContext from "@/Context/NavContext";
 import { useState } from "react";
 import Sidebar from "@/components/Navigation/Sidebar";
+import { useRouter } from "next/router";
+import AdminNavigation from "@/components/Navigation/AdminNavigation";
 
 const mitr = Mitr({
   subsets: ["latin"],
@@ -29,6 +31,7 @@ const mulish = Mulish({
 });
 
 export default function App({ Component, pageProps }) {
+  const { asPath } = useRouter();
   const [sidebar, setSidebar] = useState(false);
   const [pathList, setPathList] = useState({
     "/": "Home",
@@ -72,16 +75,29 @@ export default function App({ Component, pageProps }) {
           poppins.variable,
         ].join(" ")}
       >
-        <NavContext.Provider value={{ sidebar, setSidebar, pathList }}>
-          <main className="sticky top-0 w-full z-10">
-            <Navbar />
-          </main>
-            <Sidebar />
-          {/* <main className="flex w-full justify-center items-center bg-screen"> */}
-            <Component {...pageProps} />
-          {/* </main> */}
-        </NavContext.Provider>
-        <Footer />
+        {asPath.startsWith("/root") ? (
+          <>
+            <main className="flex w-full justify-between">
+              <AdminNavigation />
+              <main className="w-10/12 bg-screen overflow-y-scroll overflow-x-hidden h-[100vh]">
+                <Component {...pageProps} />
+              </main>
+            </main>
+          </>
+        ) : (
+          <>
+            <NavContext.Provider value={{ sidebar, setSidebar, pathList }}>
+              <main className="sticky top-0 w-full z-10">
+                <Navbar />
+              </main>
+              <Sidebar />
+              {/* <main className="flex w-full justify-center items-center bg-screen"> */}
+              <Component {...pageProps} />
+              {/* </main> */}
+            </NavContext.Provider>
+            <Footer />
+          </>
+        )}
       </main>
     </>
   );
