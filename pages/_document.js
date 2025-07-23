@@ -6,8 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <Script
-          id="adsense-script"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2572036731662606"
           crossOrigin="anonymous"
